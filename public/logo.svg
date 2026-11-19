@@ -1,0 +1,35 @@
+<svg width="200" height="220" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#F2C94C" />
+      <stop offset="50%" stopColor="#D4A017" />
+      <stop offset="100%" stopColor="#996515" />
+    </linearGradient>
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#0E285F" />
+      <stop offset="50%" stopColor="#0B1F4B" />
+      <stop offset="100%" stopColor="#061026" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(60, 8) scale(0.8)">
+    <path d="M5 35 L15 15 L35 28 L50 5 L65 28 L85 15 L95 35 Z" fill="url(#goldGrad)" stroke="#996515" stroke-width="2" />
+    <circle cx="15" cy="14" r="3" fill="#FFFDF5" />
+    <circle cx="50" cy="4" r="3.5" fill="#FFFDF5" />
+    <circle cx="85" cy="14" r="3" fill="#FFFDF5" />
+    <rect x="5" y="35" width="90" height="7" rx="3" fill="url(#goldGrad)" />
+  </g>
+  <path d="M 40 45 L 160 45 C 160 45 165 115 100 185 C 35 115 40 45 40 45 Z" fill="url(#navyGrad)" stroke="url(#goldGrad)" stroke-width="6" stroke-linejoin="round" />
+  <path d="M 48 52 L 152 52 C 152 52 156 112 100 174 C 44 112 48 52 48 52 Z" fill="none" stroke="#F2C94C" stroke-width="1.5" opacity="0.8" />
+  <rect x="94" y="60" width="12" height="62" rx="2" fill="url(#goldGrad)" />
+  <rect x="74" y="74" width="52" height="12" rx="2" fill="url(#goldGrad)" />
+  <circle cx="100" cy="80" r="3" fill="#FFFDF5" />
+  <g transform="translate(68, 126)">
+    <path d="M 32 10 C 22 6 8 8 0 14 L 0 34 C 8 28 22 26 32 30 Z" fill="#FFFDF5" stroke="url(#goldGrad)" stroke-width="2" />
+    <path d="M 32 10 C 42 6 56 8 64 14 L 64 34 C 56 28 42 26 32 30 Z" fill="#FFFDF5" stroke="url(#goldGrad)" stroke-width="2" />
+    <line x1="32" y1="10" x2="32" y2="30" stroke="#996515" stroke-width="2.5" />
+  </g>
+  <g transform="translate(15, 178)">
+    <rect x="26" y="10" width="118" height="18" rx="2" fill="url(#goldGrad)" stroke="#80530D" stroke-width="1.5" />
+    <text x="85" y="23" text-anchor="middle" fill="#0B1F4B" font-size="8" font-weight="bold" font-family="serif">TRINITY INTERNATIONAL</text>
+  </g>
+</svg>
