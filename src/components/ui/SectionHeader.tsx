@@ -2,9 +2,9 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 interface SectionHeaderProps {
-  badge?: string;
-  title: string;
-  subtitle?: string;
+  badge?: React.ReactNode;
+  title: React.ReactNode;
+  subtitle?: React.ReactNode;
   align?: "center" | "left";
   className?: string;
   light?: boolean;
@@ -25,15 +25,15 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
   return (
     <div
       className={cn(
-        "mb-12",
-        align === "center" ? "text-center mx-auto max-w-3xl" : "text-left max-w-2xl",
+        "mb-10 sm:mb-12",
+        align === "center" ? "text-center mx-auto max-w-5xl" : "text-left max-w-4xl",
         className
       )}
     >
       {badge && (
         <span
           className={cn(
-            "inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase mb-3 border",
+            "inline-flex items-center px-3.5 py-1 rounded-full text-xs sm:text-[13px] font-bold tracking-wider uppercase mb-3 border",
             light
               ? "bg-gold-500/20 text-gold-300 border-gold-400/50"
               : "bg-gold-100 text-gold-900 border-gold-400"
@@ -44,13 +44,12 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
       )}
       <HeadingTag
         className={cn(
-          "font-serif text-3xl sm:text-4xl lg:text-4xl font-bold tracking-tight mb-4 leading-tight",
+          "font-serif text-3xl sm:text-4xl xl:text-[42px] font-bold tracking-tight mb-4 leading-tight",
           light ? "text-white" : "text-navy-950"
         )}
       >
         {title}
       </HeadingTag>
-      {/* Decorative Gold Accent Underline */}
       <div
         className={cn(
           "flex items-center gap-2 mb-4",
@@ -67,7 +66,8 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
       {subtitle && (
         <p
           className={cn(
-            "text-base sm:text-lg leading-relaxed",
+            "text-base sm:text-lg xl:text-xl leading-relaxed max-w-3xl",
+            align === "center" ? "mx-auto" : "",
             light ? "text-slate-200" : "text-slate-700 font-medium"
           )}
         >

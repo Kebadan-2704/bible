@@ -12,8 +12,6 @@ export interface DegreeProgramme {
   level: "Undergraduate" | "Postgraduate" | "Doctoral";
   duration: string;
   description: string;
-  source: "Brochure 1" | "Brochure 2" | "Both";
-  discrepancyNote?: string;
 }
 
 export interface OrdinanceCourse {
@@ -21,7 +19,6 @@ export interface OrdinanceCourse {
   designation: string;
   focus: string;
   eligibility: string;
-  source: "Brochure 2";
 }
 
 export interface CoreSubject {
@@ -54,31 +51,24 @@ export const schoolsAndDivisions: SchoolDivision[] = [
   },
 ];
 
-/**
- * Union of Degrees Offered across Brochure 1 and Brochure 2.
- * Note: Brochure 1 displays 6 degree badges in the bottom strip (Th.D., D.D., D.Min., B.Th., B.Min., B.D.)
- * while listing B.D., M.Div./M.Th., and Ph.D. under "DEGREE PROGRAMMES".
- * Brochure 2 lists B.Th., B.Div., M.Th., M.Div., M.Min., D.D., and Ph.D. under "DEGREE COURSES".
- */
 export const allDegreesOffered: DegreeProgramme[] = [
   {
     code: "B.Th.",
     title: "Bachelor of Theology",
     fullTitle: "Bachelor of Theology (B.Th.)",
     level: "Undergraduate",
-    duration: "3 - 4 Years",
-    description: "Foundational undergraduate ecclesiastical study covering Christian doctrines, scriptures, church history, and ministry essentials.",
-    source: "Both",
+    duration: "3 – 4 Years",
+    description:
+      "Foundational undergraduate ecclesiastical study covering Christian doctrines, scriptures, church history, and ministry essentials.",
   },
   {
     code: "B.D. / B.Div.",
     title: "Bachelor of Divinity",
     fullTitle: "Bachelor of Divinity (B.D. / B.Div.)",
     level: "Undergraduate",
-    duration: "3 - 4 Years",
-    description: "Comprehensive ministerial bachelor's degree in Theology and Religious Education, preparing students for pastoral ordination.",
-    source: "Both",
-    discrepancyNote: "Brochure 1 writes B.D.; Brochure 2 writes B.Div.",
+    duration: "3 – 4 Years",
+    description:
+      "Comprehensive ministerial bachelor's degree in Theology and Religious Education, preparing candidates for pastoral ordination.",
   },
   {
     code: "B.Min.",
@@ -86,9 +76,8 @@ export const allDegreesOffered: DegreeProgramme[] = [
     fullTitle: "Bachelor of Ministry (B.Min.)",
     level: "Undergraduate",
     duration: "3 Years",
-    description: "Practical ecclesiastical degree focused on church planting, pastoral work, youth ministry, and evangelistic leadership.",
-    source: "Brochure 1",
-    discrepancyNote: "Prominently featured in Brochure 1 degrees strip; omitted from Brochure 2 list.",
+    description:
+      "Practical ecclesiastical degree focused on church planting, pastoral work, youth ministry, and evangelistic leadership.",
   },
   {
     code: "M.Th.",
@@ -96,19 +85,17 @@ export const allDegreesOffered: DegreeProgramme[] = [
     fullTitle: "Master of Theology (M.Th.)",
     level: "Postgraduate",
     duration: "2 Years",
-    description: "Advanced theological degree with specialized research tracks in Systematic Theology, Biblical Studies, and Christian Ethics.",
-    source: "Both",
-    discrepancyNote: "Listed under Degree Programmes in Brochure 1 and Degree Courses in Brochure 2.",
+    description:
+      "Advanced theological degree with specialized research tracks in Systematic Theology, Biblical Studies, and Christian Ethics.",
   },
   {
     code: "M.Div.",
     title: "Master of Divinity",
     fullTitle: "Master of Divinity (M.Div.)",
     level: "Postgraduate",
-    duration: "2 - 3 Years",
-    description: "Standard clerical postgraduate qualification equipping pastors and church executives with comprehensive theological and pastoral competencies.",
-    source: "Both",
-    discrepancyNote: "Paired with M.Th. in Brochure 1; listed separately in Brochure 2.",
+    duration: "2 – 3 Years",
+    description:
+      "Standard clerical postgraduate qualification equipping pastors and church leaders with comprehensive theological and pastoral competencies.",
   },
   {
     code: "M.Min.",
@@ -116,9 +103,8 @@ export const allDegreesOffered: DegreeProgramme[] = [
     fullTitle: "Master of Ministry (M.Min.)",
     level: "Postgraduate",
     duration: "2 Years",
-    description: "Specialized postgraduate program emphasizing applied pastoral counselling, church governance, and leadership development.",
-    source: "Brochure 2",
-    discrepancyNote: "Listed in Brochure 2 Degree Courses & leaders' credentials; absent from Brochure 1 degrees strip.",
+    description:
+      "Specialized postgraduate programme emphasizing applied pastoral counselling, church governance, and leadership development.",
   },
   {
     code: "D.Min.",
@@ -126,85 +112,71 @@ export const allDegreesOffered: DegreeProgramme[] = [
     fullTitle: "Doctor of Ministry (D.Min.)",
     level: "Doctoral",
     duration: "3 Years",
-    description: "Advanced professional doctorate designed for seasoned pastors, bishops, and ministry directors to enhance ministerial practice.",
-    source: "Brochure 1",
-    discrepancyNote: "Present in Brochure 1 degree strip; omitted in Brochure 2 degree courses.",
+    description:
+      "Advanced professional doctorate designed for seasoned pastors, bishops, and ministry directors to deepen ministerial practice.",
   },
   {
     code: "Th.D.",
     title: "Doctor of Theology",
     fullTitle: "Doctor of Theology (Th.D.)",
     level: "Doctoral",
-    duration: "3 - 4 Years",
-    description: "Rigorous academic theological doctorate focusing on advanced doctrinal analysis, hermeneutical treatises, and theological literature.",
-    source: "Brochure 1",
-    discrepancyNote: "Present in Brochure 1 degree strip; Brochure 2 lists Ph.D. instead.",
+    duration: "3 – 4 Years",
+    description:
+      "Rigorous academic theological doctorate focusing on advanced doctrinal analysis, hermeneutical treatises, and theological literature.",
   },
   {
     code: "D.D.",
     title: "Doctor of Divinity",
     fullTitle: "Doctor of Divinity (D.D.)",
     level: "Doctoral",
-    duration: "Advanced / Conferred",
-    description: "Prestigious ecclesiastical doctorate recognizing mature theological scholarship, long-standing ministerial leadership, and ecclesiastical contribution.",
-    source: "Both",
+    duration: "Advanced Ecclesiastical Track",
+    description:
+      "Prestigious ecclesiastical doctorate recognizing mature theological scholarship, long-standing ministerial leadership, and diocesan service.",
   },
   {
     code: "Ph.D.",
     title: "Doctor of Philosophy in Theology",
-    fullTitle: "Doctor of Philosophy (Ph.D.) - 4 Years",
+    fullTitle: "Doctor of Philosophy (Ph.D.) – 4 Years",
     level: "Doctoral",
     duration: "4 Years",
-    description: "Terminal academic research degree requiring an original dissertation project (D.P.) contributing to biblical or theological knowledge.",
-    source: "Both",
-    discrepancyNote: "Brochure 1 explicitly specifies 4 years; Brochure 2 lists as Doctor of Philosophy.",
+    description:
+      "Terminal academic research degree requiring an original dissertation project (D.P.) contributing to biblical or theological scholarship.",
   },
 ];
 
-/**
- * Ordinance Courses (listed exclusively in Brochure 2 under ORDINANCE COURSES)
- */
 export const ordinanceCourses: OrdinanceCourse[] = [
   {
     title: "Evangelist",
     designation: "Evangelistic Clerical Ordination Track",
     focus: "Gospel proclamation, church planting, open-air ministry, and mission mobilization.",
     eligibility: "Active gospel ministers and parish evangelists seeking ecclesiastical recognition.",
-    source: "Brochure 2",
   },
   {
     title: "Pastor",
     designation: "Pastoral Ministry Ordination Track",
     focus: "Shepherding local congregations, homiletics, administering sacraments, and pastoral counselling.",
-    eligibility: "Candidates with biblical diploma or degree called to full-time local church pastorship.",
-    source: "Brochure 2",
+    eligibility: "Candidates with a biblical diploma or degree called to full-time local church pastorship.",
   },
   {
     title: "Apostle",
     designation: "Apostolic Leadership & Diocesan Pioneer Track",
     focus: "Regional church oversight, episcopal church planting networks, and ministerial mentorship.",
     eligibility: "Senior ministers overseeing multiple mission congregations or diocesan initiatives.",
-    source: "Brochure 2",
   },
   {
     title: "Reverend",
     designation: "Ordained Reverend Clergy Track",
     focus: "Ecclesiastical liturgical rites, canon order, institutional chaplaincy, and sacramental rites.",
-    eligibility: "Licensed pastoral workers advancing to fully credentialed clerical reverend standing.",
-    source: "Brochure 2",
+    eligibility: "Licensed pastoral workers advancing to credentialed clerical reverend standing.",
   },
   {
     title: "Bishop",
     designation: "Episcopal Consecration & Bishopric Studies Track",
-    focus: "Episcopal oversight, diocese governance, clerical ordinations, and institutional presidency.",
+    focus: "Episcopal oversight, diocesan governance, clerical ordinations, and institutional stewardship.",
     eligibility: "Presbyters, reverends, and senior ministers nominated for episcopal consecration.",
-    source: "Brochure 2",
   },
 ];
 
-/**
- * Core Subjects (13 subjects directly transcribed from Brochure 1 & 2)
- */
 export const coreSubjects: CoreSubject[] = [
   {
     id: "biblical-studies",
@@ -286,16 +258,13 @@ export const coreSubjects: CoreSubject[] = [
   },
 ];
 
-/**
- * Academic Abbreviations Legend (directly from Brochure 1)
- */
 export const academicAbbreviations: AcademicAbbreviation[] = [
   { abbreviation: "B.S.", definition: "Biblical Studies", notes: "Foundational and hermeneutical studies of scripture." },
   { abbreviation: "O.T.", definition: "Old Testament Studies", notes: "Hebrew Scriptures, Torah, and Ancient Near Eastern contexts." },
   { abbreviation: "N.T.", definition: "New Testament Studies", notes: "Gospel and apostolic literature, transmission, and Greek text." },
   { abbreviation: "S.T.", definition: "Systematic Theology", notes: "Comprehensive doctrinal and philosophical theology." },
   { abbreviation: "C.E.", definition: "Christian Ethics", notes: "Moral theology, social responsibility, and justice." },
-  { abbreviation: "SGT", definition: "Studies in Gender & Theology", notes: "Intersectional, feminist, and gender theories in theology." },
+  { abbreviation: "SGT", definition: "Studies in Gender & Theology", notes: "Intersectional, feminist, and gender studies in theology." },
   { abbreviation: "R.S.", definition: "Religious Studies (Methodology)", notes: "Phenomenological and sociological methodologies in religion." },
   { abbreviation: "D.P.", definition: "Dissertation Project", notes: "Required terminal research treatise for postgraduate and doctoral awards." },
 ];

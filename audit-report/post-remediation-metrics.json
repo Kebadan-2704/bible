@@ -1,0 +1,42 @@
+{
+  "viewportsChecked": 16,
+  "overflowViolations": [],
+  "headerClipViolations": [],
+  "desktopNavWrapViolations": [],
+  "contrastFailures": [],
+  "smallTargets": [
+    {
+      "route": "/",
+      "tag": "A",
+      "text": "Skip to main content",
+      "w": 1,
+      "h": 1
+    },
+    {
+      "route": "/about",
+      "tag": "A",
+      "text": "Skip to main content",
+      "w": 1,
+      "h": 1
+    },
+    {
+      "route": "/curriculum",
+      "tag": "A",
+      "text": "Skip to main content",
+      "w": 1,
+      "h": 1
+    },
+    {
+      "route": "/contact",
+      "tag": "A",
+      "text": "Skip to main content",
+      "w": 1,
+      "h": 1
+    }
+  ],
+  "cls": 0.005,
+  "lcpMs": 188,
+  "consoleErrors": [],
+  "pageErrors": [],
+  "failedAssets": []
+}

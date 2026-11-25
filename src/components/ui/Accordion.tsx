@@ -6,9 +6,9 @@ import { cn } from "@/lib/utils";
 
 export interface AccordionItem {
   id: string;
-  title: string;
+  title: React.ReactNode;
   content: React.ReactNode;
-  badge?: string;
+  badge?: React.ReactNode;
 }
 
 interface AccordionProps {
@@ -40,6 +40,8 @@ export const Accordion: React.FC<AccordionProps> = ({
     <div className={cn("space-y-3", className)}>
       {items.map((item) => {
         const isOpen = openIds.includes(item.id);
+        const headingId = `${item.id}-trigger`;
+        const panelId = `${item.id}-panel`;
         return (
           <div
             key={item.id}
@@ -49,30 +51,38 @@ export const Accordion: React.FC<AccordionProps> = ({
             )}
           >
             <button
+              id={headingId}
+              type="button"
               onClick={() => toggle(item.id)}
-              className="w-full flex items-center justify-between px-5 py-4 text-left font-serif font-semibold text-navy-950 focus:outline-none focus:bg-slate-50 transition-colors"
+              className="w-full flex items-center justify-between px-5 py-4 text-left font-serif font-semibold text-navy-950 focus:outline-none focus-visible:bg-slate-50 transition-colors min-h-[52px]"
               aria-expanded={isOpen}
+              aria-controls={panelId}
             >
-              <div className="flex items-center gap-3 pr-4">
+              <div className="flex flex-wrap items-center gap-2.5 pr-4">
                 <span className="text-base sm:text-lg">{item.title}</span>
                 {item.badge && (
-                  <span className="text-xs font-sans px-2.5 py-0.5 rounded-full bg-gold-100 text-gold-800 border border-gold-300">
+                  <span className="text-xs font-sans px-2.5 py-0.5 rounded-full bg-gold-100 text-gold-900 border border-gold-300">
                     {item.badge}
                   </span>
                 )}
               </div>
               <ChevronDown
                 className={cn(
-                  "w-5 h-5 text-gold-600 transition-transform duration-200 shrink-0",
+                  "w-5 h-5 text-gold-700 transition-transform duration-200 shrink-0",
                   isOpen && "rotate-180 text-navy-900"
                 )}
+                aria-hidden="true"
               />
             </button>
-            {isOpen && (
-              <div className="px-5 pb-5 pt-1 text-slate-600 text-sm sm:text-base border-t border-slate-100 bg-slate-50/50">
-                {item.content}
-              </div>
-            )}
+            <div
+              id={panelId}
+              role="region"
+              aria-labelledby={headingId}
+              hidden={!isOpen}
+              className="px-5 pb-5 pt-2 text-slate-700 text-sm sm:text-base border-t border-slate-100 bg-slate-50/50"
+            >
+              {item.content}
+            </div>
           </div>
         );
       })}

@@ -1,0 +1,46 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="globeBg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#061026"/>
+      <stop offset="50%" stop-color="#0B1F4B"/>
+      <stop offset="100%" stop-color="#112C68"/>
+    </linearGradient>
+    <linearGradient id="orbitGold" x1="250" y1="150" x2="950" y2="650" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F7DB80"/>
+      <stop offset="50%" stop-color="#D4A017"/>
+      <stop offset="100%" stop-color="#996515"/>
+    </linearGradient>
+    <radialGradient id="centerSun" cx="600" cy="400" r="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D4A017" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#061026" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#globeBg)"/>
+  <rect width="1200" height="800" fill="url(#centerSun)"/>
+  <rect x="28" y="28" width="1144" height="744" rx="18" stroke="url(#orbitGold)" stroke-opacity="0.35" stroke-width="1.5"/>
+  <!-- Celestial Meridian Globe -->
+  <circle cx="600" cy="400" r="250" stroke="url(#orbitGold)" stroke-width="2.5" stroke-opacity="0.7" fill="#081636" fill-opacity="0.5"/>
+  <ellipse cx="600" cy="400" rx="250" ry="95" stroke="url(#orbitGold)" stroke-width="1.5" stroke-opacity="0.45"/>
+  <ellipse cx="600" cy="400" rx="250" ry="185" stroke="url(#orbitGold)" stroke-width="1.2" stroke-opacity="0.3"/>
+  <ellipse cx="600" cy="400" rx="100" ry="250" stroke="url(#orbitGold)" stroke-width="1.5" stroke-opacity="0.45"/>
+  <ellipse cx="600" cy="400" rx="190" ry="250" stroke="url(#orbitGold)" stroke-width="1.2" stroke-opacity="0.3"/>
+  <line x1="350" y1="400" x2="850" y2="400" stroke="url(#orbitGold)" stroke-width="1.5" stroke-opacity="0.4"/>
+  <line x1="600" y1="150" x2="600" y2="650" stroke="url(#orbitGold)" stroke-width="1.5" stroke-opacity="0.4"/>
+  <!-- Connecting Network Arcs from YGM Bangalore Hub -->
+  <path d="M270 315 Q435 230 600 400" stroke="#F2C94C" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M920 335 Q760 250 600 400" stroke="#F2C94C" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M475 560 Q540 480 600 400" stroke="#F2C94C" stroke-width="1.8" stroke-dasharray="4 4"/>
+  <path d="M770 545 Q690 475 600 400" stroke="#F2C94C" stroke-width="1.8" stroke-dasharray="4 4"/>
+  <!-- Beacon Nodes (USA, Europe, Malaysia, Regional India, Center HQ YGM-Bangalore) -->
+  <circle cx="270" cy="315" r="14" fill="#0E285F" stroke="#F2C94C" stroke-width="3"/>
+  <circle cx="270" cy="315" r="5" fill="#FCE38A"/>
+  <circle cx="920" cy="335" r="14" fill="#0E285F" stroke="#F2C94C" stroke-width="3"/>
+  <circle cx="920" cy="335" r="5" fill="#FCE38A"/>
+  <circle cx="475" cy="560" r="12" fill="#0E285F" stroke="#F2C94C" stroke-width="2.5"/>
+  <circle cx="770" cy="545" r="12" fill="#0E285F" stroke="#F2C94C" stroke-width="2.5"/>
+  <!-- Central Illuminated Shield Cross at YGM HQ -->
+  <circle cx="600" cy="400" r="36" fill="url(#orbitGold)" fill-opacity="0.22" stroke="#F2C94C" stroke-width="2"/>
+  <circle cx="600" cy="400" r="20" fill="url(#orbitGold)"/>
+  <rect x="596" y="388" width="8" height="24" rx="1.5" fill="#061026"/>
+  <rect x="590" y="395" width="20" height="7" rx="1.5" fill="#061026"/>
+</svg>

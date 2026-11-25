@@ -16,7 +16,7 @@ export const Crest: React.FC<CrestProps> = ({ className = "", size = 64, showTex
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="drop-shadow-md shrink-0"
-        aria-label="Trinity International University Crest"
+        aria-label="University of Trinity International Crest"
         role="img"
       >
         <defs>
@@ -126,10 +126,10 @@ export const Crest: React.FC<CrestProps> = ({ className = "", size = 64, showTex
       {showText && (
         <div className="mt-2 text-center">
           <p className="font-serif font-bold text-navy-950 tracking-wider text-sm uppercase">
-            Trinity International University
+            University of Trinity International
           </p>
           <p className="text-xs text-gold-700 font-bold tracking-wide">
-            Indian Trinity Church Diocese
+            Trinity Church of India Diocese
           </p>
         </div>
       )}

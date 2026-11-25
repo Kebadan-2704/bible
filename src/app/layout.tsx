@@ -1,39 +1,67 @@
 import type { Metadata } from "next";
+import { Cinzel, Inter, Noto_Sans_Tamil } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
+import { AnnouncementTicker } from "@/components/layout/AnnouncementTicker";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import { BackToTop } from "@/components/layout/BackToTop";
+import { LocaleProvider } from "@/components/providers/LocaleProvider";
 import { institutionConfig } from "@/data/config";
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-cinzel",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const notoSansTamil = Noto_Sans_Tamil({
+  subsets: ["tamil"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-tamil",
+  display: "swap",
+});
+
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://trinityinternationaluniversity.edu.in";
 
 export const metadata: Metadata = {
   title: {
-    template: `%s | ${institutionConfig.institutionName}`,
-    default: `${institutionConfig.institutionName} | ${institutionConfig.tagline}`,
+    template: `%s | University of Trinity International`,
+    default: `${institutionConfig.institutionName} | Theological Education`,
   },
   description:
-    "An institution legally established under Christian clerical rites and traditions (Indian Trinity Church Diocese). Offering theological degrees from B.Th. to Ph.D., ministerial curriculum, and pastoral ordination.",
+    "Theological education legally constituted under the Christian Legal Rites and Traditions (Trinity Church of India Diocese), Regd. Indian Trusts Act, 1882.",
   keywords: [
-    "Trinity International University",
-    "Indian Trinity Church Diocese",
-    "Bible College India",
-    "Theology Degrees",
+    "University of Trinity International",
+    "Trinity Church of India Diocese",
+    "Theological Education India",
     "Bachelor of Theology",
     "Master of Divinity",
     "Doctor of Theology",
     "Christian Ministry",
-    "Pastoral Ordination",
-    "Bangalore Bible College",
+    "YGM Bangalore Bible College",
   ],
-  metadataBase: new URL("https://trinityinternationaluniversity.edu.in"),
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://trinityinternationaluniversity.edu.in",
+    url: siteUrl,
     siteName: institutionConfig.institutionName,
-    title: `${institutionConfig.institutionName} - A Global University for Faith, Knowledge & Service`,
+    title: `${institutionConfig.institutionName} – Faith, Knowledge & Service`,
     description:
-      "Christian theological institution established under clerical rites and traditions. Degrees in Biblical Studies, Systematic Theology, and Christian Ministry.",
+      "Christian theological institution offering biblical studies, ministry curriculum, languages, and doctoral programmes.",
   },
   twitter: {
     card: "summary_large_image",
@@ -51,13 +79,14 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     name: institutionConfig.institutionName,
-    alternateName: institutionConfig.institutionNameAlt,
     description: institutionConfig.subheading,
-    url: "https://trinityinternationaluniversity.edu.in",
-    logo: "https://trinityinternationaluniversity.edu.in/logo.svg",
+    url: siteUrl,
+    logo: `${siteUrl}/icon.svg`,
+    email: institutionConfig.contact.admissionsEmail,
     address: {
       "@type": "PostalAddress",
       addressLocality: institutionConfig.headquarters.city,
+      addressRegion: institutionConfig.headquarters.state,
       addressCountry: "IN",
     },
     parentOrganization: {
@@ -66,24 +95,36 @@ export default function RootLayout({
     },
   };
 
+  const serializedJsonLd = JSON.stringify(jsonLd).replace(/</g, "\\u003c");
+
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${cinzel.variable} ${inter.variable} ${notoSansTamil.variable}`}
+    >
       <head>
-        <meta name="layoza-motion" content="calm" />
-        <meta name="layoza-brand-allow" content="font:inter, palette:cream" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: serializedJsonLd }}
         />
       </head>
       <body className="bg-ivory text-navy-950 font-sans antialiased flex flex-col min-h-screen selection:bg-gold-500 selection:text-navy-950">
-        <ScrollProgress />
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <BackToTop />
+        <LocaleProvider>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2.5 focus:rounded-lg focus:bg-gold-500 focus:text-navy-950 focus:font-bold focus:shadow-lg"
+          >
+            Skip to main content
+          </a>
+          <ScrollProgress />
+          <Navbar />
+          <AnnouncementTicker />
+          <main id="main-content" className="flex-1" tabIndex={-1}>
+            {children}
+          </main>
+          <Footer />
+          <BackToTop />
+        </LocaleProvider>
       </body>
     </html>
   );

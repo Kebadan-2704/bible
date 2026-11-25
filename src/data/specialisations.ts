@@ -125,7 +125,7 @@ export const specialisationsList: SpecialisationData[] = [
         ],
       },
     ],
-    relatedSlugs: ["christian-ethics", "research-methodologies", "theological-institutes"],
+    relatedSlugs: ["christian-ethics", "new-testament", "theological-institutes"],
   },
   {
     slug: "new-testament",
@@ -141,7 +141,7 @@ export const specialisationsList: SpecialisationData[] = [
     sections: [
       {
         heading: "New Testament Specialisation Courses (N.T.)",
-        subheading: "Electives and advanced seminars from Brochure Section 4",
+        subheading: "Electives and advanced seminars across the New Testament curriculum",
         courses: [
           {
             title: "Seminar on Early Christian Literature",

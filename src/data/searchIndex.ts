@@ -8,22 +8,29 @@ export interface SearchItem {
 }
 
 export const searchIndex: SearchItem[] = [
-  // Pages
   {
     id: "page-home",
     title: "Home",
     category: "Page",
     url: "/",
-    description: "Welcome to Trinity International University - Faith, Knowledge & Service.",
+    description: "Welcome to University of Trinity International – Faith, Knowledge & Service.",
     keywords: ["home", "main", "university", "trinity", "faith"],
   },
   {
     id: "page-about",
-    title: "About Us",
+    title: "About Us & Institutional Heritage",
     category: "Page",
     url: "/about",
-    description: "Institutional background, theological heritage, trust registration, and vision.",
+    description: "Institutional heritage, trust registration, and clerical traditions.",
     keywords: ["about", "history", "trust", "heritage", "mission"],
+  },
+  {
+    id: "page-vision",
+    title: "Vision & Mission",
+    category: "Page",
+    url: "/vision-and-mission",
+    description: "Guiding ecclesiastical vision and four core mission pillars.",
+    keywords: ["vision", "mission", "pillars", "principles"],
   },
   {
     id: "page-governance",
@@ -31,22 +38,22 @@ export const searchIndex: SearchItem[] = [
     category: "Page",
     url: "/governance",
     description: "Founder & Chairman, General Secretary, Vice Chairman, and Executive Directors.",
-    keywords: ["governance", "leadership", "chairman", "sundara bharathi", "ebenezer", "council"],
+    keywords: ["governance", "leadership", "chairman", "sundarabharathi", "ebenezer", "council"],
   },
   {
     id: "page-centres",
     title: "Administrative Centres",
     category: "Page",
     url: "/centres",
-    description: "Regional and international administrative offices in Bangalore, Coimbatore, Chennai, and abroad.",
-    keywords: ["centres", "campuses", "locations", "bangalore", "coimbatore", "chennai", "malaysia", "usa"],
+    description: "Head Quarters YGM – Bangalore and administrative centres across India, Malaysia, and Georgia (USA).",
+    keywords: ["centres", "campuses", "locations", "ygm", "bangalore", "coimbatore", "chennai", "dandeli", "malaysia", "usa"],
   },
   {
     id: "page-academics",
     title: "Academics Hub",
     category: "Page",
     url: "/academics",
-    description: "Schools of Biblical Studies and Church Ministry, degree programmes, core subjects.",
+    description: "Schools of Biblical Studies and Church Ministry, degree programmes, and 13 core subjects.",
     keywords: ["academics", "schools", "degrees", "programmes", "courses", "bachelor", "master", "phd"],
   },
   {
@@ -78,27 +85,65 @@ export const searchIndex: SearchItem[] = [
     title: "Partner & Affiliated Institutions",
     category: "Page",
     url: "/affiliations",
-    description: "International partner and affiliated institutions across USA, UK, France, Ireland, and Switzerland.",
-    keywords: ["affiliations", "partners", "international", "christ university", "british bible"],
+    description: "Partner and affiliated institutions across USA, England, France, Ireland, and Switzerland.",
+    keywords: ["affiliations", "partners", "international", "university of christ", "british university of bible"],
   },
   {
     id: "page-admissions",
-    title: "Admissions & Prospectus",
+    title: "Admissions & Programme Overview",
     category: "Page",
     url: "/admissions",
-    description: "Admission procedures, eligibility criteria, FAQs, and prospectus requests.",
+    description: "Admission procedures, eligibility overview, FAQs, and online application.",
     keywords: ["admissions", "apply", "enrol", "eligibility", "prospectus", "faq"],
   },
   {
+    id: "page-prospectus",
+    title: "Digital Prospectus & Academic Catalogue",
+    category: "Page",
+    url: "/prospectus",
+    description: "Complete printable overview of degrees, curriculum modules, and trust registrations.",
+    keywords: ["prospectus", "pdf", "print", "catalogue", "handbook"],
+  },
+  {
+    id: "page-accreditations",
+    title: "Institutional Accreditations",
+    category: "Page",
+    url: "/accreditations",
+    description: "Ecclesiastical standing, trust charters, and documentation request information.",
+    keywords: ["accreditations", "recognition", "trust", "documents"],
+  },
+  {
+    id: "page-certificates",
+    title: "Certificates & Awards Verification",
+    category: "Page",
+    url: "/certificates-and-awards",
+    description: "Graduate credential verification desk and diocesan award records.",
+    keywords: ["certificates", "awards", "verification", "transcripts"],
+  },
+  {
     id: "page-contact",
-    title: "Contact & Enquiry",
+    title: "Contact & Enquiry Secretariat",
     category: "Page",
     url: "/contact",
-    description: "Get in touch with admissions, central office, or regional administrative centres.",
-    keywords: ["contact", "enquiry", "message", "address", "email", "phone"],
+    description: "Connect with admissions, central secretariat, or verification desks.",
+    keywords: ["contact", "enquiry", "message", "address", "email", "secretariat"],
   },
-
-  // Degrees
+  {
+    id: "page-privacy",
+    title: "Privacy Notice & Data Handling",
+    category: "Page",
+    url: "/privacy",
+    description: "Privacy statement governing enquiry form submissions, correspondence, and confidentiality.",
+    keywords: ["privacy", "policy", "data", "gdpr", "cookies", "confidentiality"],
+  },
+  {
+    id: "page-disclaimer",
+    title: "Legal & Institutional Disclaimer",
+    category: "Page",
+    url: "/disclaimer",
+    description: "Statutory ecclesiastical standing, trust scope, and verification disclaimers.",
+    keywords: ["disclaimer", "legal", "statutory", "ugc", "trust"],
+  },
   {
     id: "deg-bth",
     title: "Bachelor of Theology (B.Th.)",
@@ -120,7 +165,7 @@ export const searchIndex: SearchItem[] = [
     title: "Master of Divinity (M.Div.)",
     category: "Degree",
     url: "/academics",
-    description: "Standard clerical postgraduate program preparing candidates for pastoral ordination.",
+    description: "Standard clerical postgraduate programme preparing candidates for pastoral ordination.",
     keywords: ["mdiv", "master of divinity", "pastoral"],
   },
   {
@@ -133,7 +178,7 @@ export const searchIndex: SearchItem[] = [
   },
   {
     id: "deg-phd",
-    title: "Doctor of Philosophy in Theology (Ph.D.) - 4 Years",
+    title: "Doctor of Philosophy in Theology (Ph.D.) – 4 Years",
     category: "Degree",
     url: "/doctoral",
     description: "Terminal academic research doctorate requiring dissertation project (D.P.).",
@@ -143,12 +188,10 @@ export const searchIndex: SearchItem[] = [
     id: "deg-honoris-causa",
     title: "Honorary Doctorate (Honoris Causa)",
     category: "Degree",
-    url: "/doctoral",
+    url: "/doctoral#honoris-causa",
     description: "Ecclesiastical honour conferred for distinguished lifetime Christian service.",
     keywords: ["honoris causa", "honorary doctorate", "conferral", "award"],
   },
-
-  // Curriculum Modules
   {
     id: "mod-1",
     title: "Module 1: Introduction to the Bible",
@@ -186,7 +229,7 @@ export const searchIndex: SearchItem[] = [
     title: "Module 5: Christian Doctrines",
     category: "Curriculum Module",
     url: "/curriculum#module-5",
-    description: "Names of God, Salvation, The Trinity, Doctrine of Man, Sin, Evil, Church Ordinances.",
+    description: "Names of God, Salvation, The Trinity, Doctrine of Man, Sin, Theodicy, Church Ordinances.",
     keywords: ["doctrines", "trinity", "salvation", "theodicy", "ordinances"],
   },
   {
@@ -195,7 +238,7 @@ export const searchIndex: SearchItem[] = [
     category: "Curriculum Module",
     url: "/curriculum#module-6",
     description: "Nature of God, Divine Revelation, Creation, Providence, Covenant, Theocracy, Law.",
-    keywords: ["old testament theology", "covenant", "creation", "law"],
+    keywords: ["old testament theology", "covenant", "creation", "law", "theodicy"],
   },
   {
     id: "mod-7",
@@ -205,8 +248,6 @@ export const searchIndex: SearchItem[] = [
     description: "Origin, Transmission of Text, Contents, History, Doctrines of the New Testament.",
     keywords: ["new testament", "nt", "transmission", "gospels", "epistles"],
   },
-
-  // Specialisations
   {
     id: "spec-systematic-theology",
     title: "Systematic Theology (S.T.) Specialisation",
@@ -230,6 +271,22 @@ export const searchIndex: SearchItem[] = [
     url: "/academics/christian-ethics",
     description: "Dietrich Bonhoeffer, human rights, feminist ethics, biblical ethics, social thought.",
     keywords: ["bonhoeffer", "human rights", "social thought", "philosophical ethics"],
+  },
+  {
+    id: "spec-electives",
+    title: "Elective Courses & Seminars",
+    category: "Specialisation",
+    url: "/academics/elective-courses",
+    description: "Apocalyptic literature, Minor Prophets, Book of Psalms, and Guided Research.",
+    keywords: ["electives", "psalms", "minor prophets", "apocalyptic"],
+  },
+  {
+    id: "spec-institutes",
+    title: "Review of the Institutes of the Christian Religion",
+    category: "Specialisation",
+    url: "/academics/theological-institutes",
+    description: "John Calvin's Institutes alongside religious and theological discourses.",
+    keywords: ["calvin", "institutes", "reformation"],
   },
   {
     id: "spec-ancient-languages",

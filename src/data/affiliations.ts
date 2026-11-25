@@ -9,20 +9,20 @@ export interface AffiliatedInstitution {
 
 export const affiliatedInstitutionsList: AffiliatedInstitution[] = [
   {
-    id: "christ-university-usa",
-    name: "Christ University",
-    country: "United States of America",
+    id: "university-of-christ-usa",
+    name: "University of Christ",
+    country: "USA",
     countryCode: "US",
     flagIcon: "🇺🇸",
-    notes: "Listed on institution brochure as partner / affiliated institution in the United States.",
+    notes: "Partner and affiliated institution in the United States.",
   },
   {
-    id: "british-bible-university-uk",
-    name: "British Bible University",
-    country: "United Kingdom",
+    id: "british-university-of-bible-england",
+    name: "British University of Bible",
+    country: "England",
     countryCode: "GB",
     flagIcon: "🇬🇧",
-    notes: "Listed on institution brochure as partner / affiliated institution in the United Kingdom.",
+    notes: "Partner and affiliated institution in England.",
   },
   {
     id: "holy-god-ministries-france",
@@ -30,7 +30,7 @@ export const affiliatedInstitutionsList: AffiliatedInstitution[] = [
     country: "France",
     countryCode: "FR",
     flagIcon: "🇫🇷",
-    notes: "Listed on institution brochure as partner / affiliated ministerial organization in France.",
+    notes: "Partner and affiliated ministerial organization in France.",
   },
   {
     id: "revival-university-ireland",
@@ -38,7 +38,7 @@ export const affiliatedInstitutionsList: AffiliatedInstitution[] = [
     country: "Ireland",
     countryCode: "IE",
     flagIcon: "🇮🇪",
-    notes: "Listed on institution brochure as partner / affiliated institution in Ireland.",
+    notes: "Partner and affiliated institution in Ireland.",
   },
   {
     id: "christian-mission-intl-switzerland",
@@ -46,9 +46,9 @@ export const affiliatedInstitutionsList: AffiliatedInstitution[] = [
     country: "Switzerland",
     countryCode: "CH",
     flagIcon: "🇨🇭",
-    notes: "Listed on institution brochure as partner / affiliated missionary organization in Switzerland.",
+    notes: "Partner and affiliated missionary organization in Switzerland.",
   },
 ];
 
 export const affiliationDisclaimer =
-  "Institutional Affiliations Note: The institutions listed above represent partner bodies and affiliated ministries as documented in the institution's official records. Trinity International University does not make secular governmental accreditation claims on behalf of partner bodies. Academic and ministerial credits are recognized mutually under religious trust charters.";
+  "Institutional Affiliations Note: The institutions listed above represent partner bodies and affiliated ministries documented by University of Trinity International (Trinity Church of India Diocese). We do not make secular governmental accreditation claims on behalf of partner bodies. Academic and ministerial credits are recognized mutually under religious trust charters.";

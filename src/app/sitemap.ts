@@ -1,8 +1,11 @@
 import { MetadataRoute } from "next";
 import { specialisationsList } from "@/data/specialisations";
 
+const LAST_VERIFIED_RELEASE = new Date("2026-11-25T00:00:00Z");
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://trinityinternationaluniversity.edu.in";
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://trinityinternationaluniversity.edu.in";
 
   const staticRoutes = [
     "",
@@ -15,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/doctoral",
     "/affiliations",
     "/admissions",
+    "/prospectus",
     "/accreditations",
     "/certificates-and-awards",
     "/vision-and-mission",
@@ -23,14 +27,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/privacy",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
+    lastModified: LAST_VERIFIED_RELEASE,
     changeFrequency: "monthly" as const,
     priority: route === "" ? 1.0 : 0.8,
   }));
 
   const specialisationRoutes = specialisationsList.map((spec) => ({
     url: `${baseUrl}/academics/${spec.slug}`,
-    lastModified: new Date(),
+    lastModified: LAST_VERIFIED_RELEASE,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));

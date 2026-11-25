@@ -1,0 +1,92 @@
+/* ============================================================================
+ * Trinity International University — Motion Specification Tokens & Primitives
+ * Preserves academic calm (`layoza-motion: calm`), 0 KB external runtime,
+ * strict `prefers-reduced-motion` support, and GPU-compositor properties only.
+ * ============================================================================ */
+
+:root {
+  --tiu-ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+  --tiu-dur-fast: 160ms;
+  --tiu-dur-card: 240ms;
+  --tiu-dur-entrance: 540ms;
+}
+
+/* Safe smooth scrolling only when motion is permitted */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Reverent hero staggered rise (replaces unused animate-in fade-in zoom-in) */
+  @keyframes tiuRise {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 12px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes tiuPanelIn {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -4px, 0) scale(0.985);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+
+  .tiu-hero-stagger > * {
+    animation: tiuRise var(--tiu-dur-entrance) var(--tiu-ease-editorial) both;
+  }
+  .tiu-hero-stagger > :nth-child(1) { animation-delay: 0ms; }
+  .tiu-hero-stagger > :nth-child(2) { animation-delay: 70ms; }
+  .tiu-hero-stagger > :nth-child(3) { animation-delay: 140ms; }
+  .tiu-hero-stagger > :nth-child(4) { animation-delay: 200ms; }
+  .tiu-hero-stagger > :nth-child(5) { animation-delay: 260ms; }
+
+  .tiu-panel-enter {
+    animation: tiuPanelIn var(--tiu-dur-fast) var(--tiu-ease-editorial) both;
+  }
+
+  /* Card elevation strictly gated to fine hover pointers */
+  @media (hover: hover) {
+    .tiu-card-lift {
+      transition: transform var(--tiu-dur-card) var(--tiu-ease-editorial),
+                  box-shadow var(--tiu-dur-card) ease,
+                  border-color var(--tiu-dur-card) ease;
+    }
+    .tiu-card-lift:hover {
+      transform: translate3d(0, -3px, 0);
+    }
+  }
+
+  /* Accordion height transition via CSS Grid track */
+  .tiu-accordion-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 220ms var(--tiu-ease-editorial);
+  }
+  .tiu-accordion-panel[data-open="true"] {
+    grid-template-rows: 1fr;
+  }
+  .tiu-accordion-inner {
+    overflow: hidden;
+  }
+}
+
+/* Global reduced-motion guarantee: freezes HeroGlobe ping & Centres pulse */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

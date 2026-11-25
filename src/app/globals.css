@@ -1,41 +1,123 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --font-cinzel: "Cinzel", "Playfair Display", Georgia, serif;
-    --font-inter: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --tiu-ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   html {
-    scroll-behavior: smooth;
     scroll-padding-top: 6rem;
-    overflow-x: hidden;
     background-color: #FAF7F0;
     color: #0B1F4B;
   }
 
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
   body {
-    font-family: var(--font-inter);
+    font-family: var(--font-inter), var(--font-tamil), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
     position: relative;
     width: 100%;
+    overflow-x: clip;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-cinzel);
+    font-family: var(--font-cinzel), var(--font-tamil), Georgia, serif;
   }
 
   /* Universal high-contrast visible focus ring for WCAG 2.4.7 */
   :focus-visible {
     outline: 2px solid #D4A017;
     outline-offset: 2px;
+  }
+}
+
+/* Utilities cleanly restoring missing Tailwind tokens & safe motion */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes tiuRise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes tiuPanelIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -4px, 0) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes tiuMarqueeScroll {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tiu-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: tiuMarqueeScroll 32s linear infinite;
+    will-change: transform;
+  }
+
+  .tiu-marquee-container:hover .tiu-marquee-track,
+  .tiu-marquee-container:focus-within .tiu-marquee-track,
+  .tiu-marquee-paused .tiu-marquee-track {
+    animation-play-state: paused;
+  }
+
+  .tiu-hero-stagger > * {
+    animation: tiuRise 520ms var(--tiu-ease-editorial) both;
+  }
+  .tiu-hero-stagger > :nth-child(1) { animation-delay: 0ms; }
+  .tiu-hero-stagger > :nth-child(2) { animation-delay: 60ms; }
+  .tiu-hero-stagger > :nth-child(3) { animation-delay: 120ms; }
+  .tiu-hero-stagger > :nth-child(4) { animation-delay: 180ms; }
+  .tiu-hero-stagger > :nth-child(5) { animation-delay: 240ms; }
+
+  .tiu-panel-enter {
+    animation: tiuPanelIn 160ms var(--tiu-ease-editorial) both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
@@ -60,7 +142,7 @@
   header, footer, .no-print, button:not(.print-allow) {
     display: none !important;
   }
-  
+
   body {
     background: #ffffff !important;
     color: #000000 !important;

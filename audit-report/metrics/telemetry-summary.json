@@ -1,0 +1,38 @@
+{
+  "auditDate": "2026-11-25",
+  "targetUrl": "http://localhost:3001",
+  "environment": "Next.js 14.2.35 dev server (localhost:3001)",
+  "totals": {
+    "sourceFiles": 53,
+    "sourceBytes": 323764,
+    "routesAudited": 22,
+    "specialisationDynamicRoutes": 6,
+    "viewportsTested": 21,
+    "zoomLevelsTested": 3,
+    "screenshotsCaptured": 102,
+    "nonGeneratingTailwindTokens": 79,
+    "undefinedGoldShadeTokens": 54,
+    "todoAndDraftSourceMarkers": 27
+  },
+  "coreWebVitalsLab": {
+    "desktop_1440x900_layoza_warm": { "lcp_ms": 680, "cls": 0, "inp_proxy_ms": 24 },
+    "desktop_1440x900_layoza_cold": { "lcp_ms": 5624, "cls": 0, "inp_proxy_ms": 24 },
+    "tablet_768x1024_layoza": { "lcp_ms": 664, "cls": 0.2051, "inp_proxy_ms": 32 },
+    "mobile_375x812_layoza": { "lcp_ms": 364, "cls": 0.0661, "inp_proxy_ms": 24 },
+    "offline_chromium_playwright_1440": { "lcp_ms": 268, "cls": 0, "fontError": "ERR_NAME_NOT_RESOLVED" }
+  },
+  "headerClippedViewports": [
+    { "viewport": "1440x900", "clipRightPx": 55, "clippedControls": ["APPLY NOW"] },
+    { "viewport": "1366x768", "clipRightPx": 92, "clippedControls": ["APPLY NOW"] },
+    { "viewport": "1280x800", "clipRightPx": 135, "clippedControls": ["Search", "APPLY NOW"] },
+    { "viewport": "1200x800", "clipRightPx": 114, "clippedControls": ["APPLY NOW"] },
+    { "viewport": "1024x768", "clipRightPx": 290, "clippedControls": ["Admissions", "Contact", "Search", "APPLY NOW"] },
+    { "viewport": "1024x1366", "clipRightPx": 290, "clippedControls": ["Admissions", "Contact", "Search", "APPLY NOW"] },
+    { "viewport": "390x844", "clipRightPx": 19, "clippedControls": ["Toggle navigation menu"] },
+    { "viewport": "375x812", "clipRightPx": 34, "clippedControls": ["Toggle navigation menu"] },
+    { "viewport": "360x800", "clipRightPx": 49, "clippedControls": ["Toggle navigation menu (100% offscreen)"] },
+    { "viewport": "320x720", "clipRightPx": 89, "clippedControls": ["Search", "Toggle navigation menu (100% offscreen)"] },
+    { "viewport": "125% zoom (1152x720)", "clipRightPx": 162, "clippedControls": ["Search", "APPLY NOW"] }
+  ],
+  "overallScore": 46.0
+}

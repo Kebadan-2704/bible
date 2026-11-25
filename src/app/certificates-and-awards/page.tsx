@@ -2,50 +2,58 @@ import React from "react";
 import { Metadata } from "next";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
+import { LText } from "@/components/ui/LocalizedText";
 import { institutionConfig } from "@/data/config";
-import { Award, FileCheck, Mail, Shield } from "lucide-react";
+import { Award, Mail, Shield } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Certificates & Awards | Verification Desk",
+  title: "Certificates & Awards Verification",
   description:
-    "Institutional certificates, charter awards, and verification registry for Trinity International University.",
+    "Graduate credential verification desk, institutional charters, and diocesan award records for University of Trinity International.",
+  alternates: { canonical: "/certificates-and-awards" },
 };
 
 export default function CertificatesAndAwardsPage() {
-  const { certificatesAndAwards, registeredUnder, legalNote } = institutionConfig;
+  const { certificatesAndAwards, legalNote, registrations } = institutionConfig;
 
   return (
     <div className="bg-ivory min-h-screen py-12 sm:py-20">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-20">
         <SectionHeader
           level="h1"
-          badge="Institutional Records"
-          title="Certificates &amp; Awards"
-          subtitle="Clerical recognitions, trust certifications, and graduate credential verifications."
+          badge={<LText en="Institutional Records" ta="நிறுவன ஆவணப் பதிவேடு" />}
+          title={<LText en="Certificates & Awards" ta="சான்றிதழ்கள் & விருதுகள்" />}
+          subtitle="Clerical recognitions, trust certifications, and graduate credential verification requests."
         />
 
-        {/* Empty State / Available On Request per Legal Rule */}
         {certificatesAndAwards.length === 0 ? (
           <div className="bg-white rounded-3xl p-8 sm:p-14 border border-slate-200 shadow-card text-center space-y-6">
-            <div className="w-16 h-16 rounded-full bg-gold-50 border border-gold-300 flex items-center justify-center text-gold-600 mx-auto">
-              <Award className="w-8 h-8" />
+            <div className="w-16 h-16 rounded-full bg-gold-50 border border-gold-300 flex items-center justify-center text-gold-700 mx-auto">
+              <Award className="w-8 h-8" aria-hidden="true" />
             </div>
 
             <div className="space-y-2 max-w-xl mx-auto">
               <h2 className="font-serif text-2xl sm:text-3xl font-bold text-navy-950">
-                Documents Available on Request
+                <LText
+                  en="Documents Available on Request"
+                  ta="கோரிக்கையின் பேரில் சான்றிதழ் சரிபார்ப்பு"
+                />
               </h2>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Diocesan charter citations, convocation award records, and certified verification transcripts are maintained in our Bangalore central registry and are issued to ordaining church bodies upon written request.
+              <p className="text-sm text-slate-700 leading-relaxed">
+                Diocesan charter records, convocation awards, and graduate verification transcripts are maintained at our YGM – Bangalore headquarters and issued to sponsoring presbyteries and church bodies upon formal request.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 max-w-lg mx-auto leading-relaxed">
-              <strong>Mandatory Institutional Notice:</strong> {legalNote}
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-700 max-w-lg mx-auto leading-relaxed">
+              <strong>Institutional Notice:</strong> {legalNote}
             </div>
 
             <div className="pt-4 flex justify-center">
-              <Button href="/contact" variant="primary" icon={<Mail className="w-4 h-4" />}>
+              <Button
+                href="/contact?type=credential_verification"
+                variant="primary"
+                icon={<Mail className="w-4 h-4" />}
+              >
                 Submit Credential Verification Request
               </Button>
             </div>
@@ -55,21 +63,22 @@ export default function CertificatesAndAwardsPage() {
             {certificatesAndAwards.map((item) => (
               <div key={item.id} className="p-6 bg-white rounded-2xl border border-slate-200">
                 <h3 className="font-serif text-xl font-bold text-navy-950">{item.title}</h3>
-                <p className="text-xs text-slate-600">{item.issuer} • {item.year}</p>
+                <p className="text-xs text-slate-700">
+                  {item.issuer} • {item.year}
+                </p>
               </div>
             ))}
           </div>
         )}
 
-        {/* Graduate Credential Verification Note */}
         <div className="mt-12 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-          <Shield className="w-6 h-6 text-gold-600 shrink-0 mt-0.5" />
-          <div className="text-xs text-slate-600 space-y-1">
-            <h4 className="font-serif font-bold text-navy-950 text-sm">
+          <Shield className="w-6 h-6 text-gold-700 shrink-0 mt-0.5" aria-hidden="true" />
+          <div className="text-xs sm:text-sm text-slate-700 space-y-1 leading-relaxed">
+            <h3 className="font-serif font-bold text-navy-950 text-sm sm:text-base">
               Graduate Verification &amp; Seal Authenticity
-            </h4>
+            </h3>
             <p>
-              Trinity International University maintains records of all degrees and ministerial certificates awarded since registration in 2002. Presbyteries, mission boards, and church councils may submit candidate certificate numbers for official episcopal endorsement.
+              University of Trinity International maintains archival records of degrees and ministerial certificates issued under our statutory trust charters (Tamil Nadu Reg. No. {registrations.tamilNadu.number}, Karnataka Reg. No. {registrations.karnataka.number}). Presbyteries, mission boards, and church councils may submit candidate details directly through our verification desk.
             </p>
           </div>
         </div>

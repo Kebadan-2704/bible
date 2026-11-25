@@ -1,0 +1,804 @@
+{
+  "totalSrcFiles": 53,
+  "framerMotionImports": [],
+  "i18nImports": [
+    "src/data/curriculum.ts",
+    "src/lib/i18n.ts"
+  ],
+  "tabsComponentImports": [],
+  "useClientFiles": [
+    "src/app/curriculum/page.tsx",
+    "src/components/forms/EnquiryForm.tsx",
+    "src/components/home/HeroGlobe.tsx",
+    "src/components/home/ProgrammeOverviewPrint.tsx",
+    "src/components/layout/BackToTop.tsx",
+    "src/components/layout/Navbar.tsx",
+    "src/components/layout/ScrollProgress.tsx",
+    "src/components/search/GlobalSearchModal.tsx",
+    "src/components/ui/Accordion.tsx",
+    "src/components/ui/Tabs.tsx"
+  ],
+  "errorBoundaryFiles": [],
+  "undefinedGoldShadesUsed": [
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/app/about/page.tsx",
+      "line": 22
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/about/page.tsx",
+      "line": 41
+    },
+    {
+      "token": "text-gold-900 (UNDEFINED)",
+      "file": "src/app/about/page.tsx",
+      "line": 64
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/about/page.tsx",
+      "line": 93
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/about/page.tsx",
+      "line": 110
+    },
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/app/academics/page.tsx",
+      "line": 63
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/academics/page.tsx",
+      "line": 96
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/academics/page.tsx",
+      "line": 117
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/academics/page.tsx",
+      "line": 123
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/academics/page.tsx",
+      "line": 217
+    },
+    {
+      "token": "text-gold-900 (UNDEFINED)",
+      "file": "src/app/academics/page.tsx",
+      "line": 261
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/academics/page.tsx",
+      "line": 268
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/academics/page.tsx",
+      "line": 294
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/academics/[slug]/page.tsx",
+      "line": 129
+    },
+    {
+      "token": "text-gold-900 (UNDEFINED)",
+      "file": "src/app/academics/[slug]/page.tsx",
+      "line": 186
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/accreditations/page.tsx",
+      "line": 66
+    },
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/app/admissions/page.tsx",
+      "line": 60
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/admissions/page.tsx",
+      "line": 86
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/affiliations/page.tsx",
+      "line": 48
+    },
+    {
+      "token": "text-gold-900 (UNDEFINED)",
+      "file": "src/app/centres/page.tsx",
+      "line": 106
+    },
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/app/contact/page.tsx",
+      "line": 32
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/contact/page.tsx",
+      "line": 35
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/curriculum/page.tsx",
+      "line": 281
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/curriculum/page.tsx",
+      "line": 297
+    },
+    {
+      "token": "text-gold-900 (UNDEFINED)",
+      "file": "src/app/doctoral/page.tsx",
+      "line": 38
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/doctoral/page.tsx",
+      "line": 48
+    },
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/app/doctoral/page.tsx",
+      "line": 91
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/doctoral/page.tsx",
+      "line": 97
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/governance/page.tsx",
+      "line": 149
+    },
+    {
+      "token": "text-gold-900 (UNDEFINED)",
+      "file": "src/app/page.tsx",
+      "line": 106
+    },
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/app/page.tsx",
+      "line": 150
+    },
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/app/page.tsx",
+      "line": 192
+    },
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/app/page.tsx",
+      "line": 197
+    },
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/app/page.tsx",
+      "line": 214
+    },
+    {
+      "token": "text-gold-950 (UNDEFINED)",
+      "file": "src/app/page.tsx",
+      "line": 214
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/page.tsx",
+      "line": 282
+    },
+    {
+      "token": "text-gold-950 (UNDEFINED)",
+      "file": "src/app/page.tsx",
+      "line": 403
+    },
+    {
+      "token": "text-gold-900 (UNDEFINED)",
+      "file": "src/app/research/page.tsx",
+      "line": 36
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/research/page.tsx",
+      "line": 47
+    },
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/app/vision-and-mission/page.tsx",
+      "line": 30
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/app/vision-and-mission/page.tsx",
+      "line": 34
+    },
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/app/vision-and-mission/page.tsx",
+      "line": 126
+    },
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/components/forms/EnquiryForm.tsx",
+      "line": 72
+    },
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/components/home/AffiliationsStrip.tsx",
+      "line": 12
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/components/home/AffiliationsStrip.tsx",
+      "line": 26
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/components/home/AffiliationsStrip.tsx",
+      "line": 43
+    },
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/components/home/ProgrammeOverviewPrint.tsx",
+      "line": 18
+    },
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/components/home/ProgrammeOverviewPrint.tsx",
+      "line": 45
+    },
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/components/home/ProgrammeOverviewPrint.tsx",
+      "line": 81
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/components/search/GlobalSearchModal.tsx",
+      "line": 129
+    },
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/components/ui/Accordion.tsx",
+      "line": 59
+    },
+    {
+      "token": "text-gold-800 (UNDEFINED)",
+      "file": "src/components/ui/Badge.tsx",
+      "line": 16
+    },
+    {
+      "token": "text-gold-700 (UNDEFINED)",
+      "file": "src/components/ui/Crest.tsx",
+      "line": 131
+    },
+    {
+      "token": "text-gold-900 (UNDEFINED)",
+      "file": "src/components/ui/SectionHeader.tsx",
+      "line": 39
+    }
+  ],
+  "invalidTailwindClasses": [
+    {
+      "token": "text-gold-600",
+      "file": "src/app/about/page.tsx",
+      "line": 65
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/about/page.tsx",
+      "line": 91
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/about/page.tsx",
+      "line": 108
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/about/page.tsx",
+      "line": 116
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/about/page.tsx",
+      "line": 120
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/about/page.tsx",
+      "line": 124
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/academics/page.tsx",
+      "line": 48
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/academics/page.tsx",
+      "line": 89
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/academics/page.tsx",
+      "line": 141
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/academics/page.tsx",
+      "line": 198
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/academics/page.tsx",
+      "line": 232
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/academics/page.tsx",
+      "line": 247
+    },
+    {
+      "token": "shadow-xs",
+      "file": "src/app/academics/page.tsx",
+      "line": 259
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/academics/[slug]/page.tsx",
+      "line": 106
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/accreditations/page.tsx",
+      "line": 30
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/admissions/page.tsx",
+      "line": 39
+    },
+    {
+      "token": "shadow-xs",
+      "file": "src/app/admissions/page.tsx",
+      "line": 54
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/admissions/page.tsx",
+      "line": 141
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/affiliations/page.tsx",
+      "line": 70
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/centres/page.tsx",
+      "line": 118
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/certificates-and-awards/page.tsx",
+      "line": 30
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/certificates-and-awards/page.tsx",
+      "line": 66
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/contact/page.tsx",
+      "line": 101
+    },
+    {
+      "token": "shadow-xs",
+      "file": "src/app/curriculum/page.tsx",
+      "line": 66
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/curriculum/page.tsx",
+      "line": 68
+    },
+    {
+      "token": "no-scrollbar",
+      "file": "src/app/curriculum/page.tsx",
+      "line": 126
+    },
+    {
+      "token": "border-l-3",
+      "file": "src/app/curriculum/page.tsx",
+      "line": 190
+    },
+    {
+      "token": "shadow-xs",
+      "file": "src/app/curriculum/page.tsx",
+      "line": 250
+    },
+    {
+      "token": "shadow-xs",
+      "file": "src/app/curriculum/page.tsx",
+      "line": 281
+    },
+    {
+      "token": "shadow-xs",
+      "file": "src/app/curriculum/page.tsx",
+      "line": 297
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/doctoral/page.tsx",
+      "line": 31
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/doctoral/page.tsx",
+      "line": 68
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/doctoral/page.tsx",
+      "line": 102
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/doctoral/page.tsx",
+      "line": 129
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/doctoral/page.tsx",
+      "line": 144
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/governance/page.tsx",
+      "line": 133
+    },
+    {
+      "token": "shadow-xs",
+      "file": "src/app/governance/page.tsx",
+      "line": 145
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/governance/page.tsx",
+      "line": 173
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/not-found.tsx",
+      "line": 13
+    },
+    {
+      "token": "animate-in",
+      "file": "src/app/page.tsx",
+      "line": 40
+    },
+    {
+      "token": "fade-in",
+      "file": "src/app/page.tsx",
+      "line": 40
+    },
+    {
+      "token": "zoom-in",
+      "file": "src/app/page.tsx",
+      "line": 40
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/page.tsx",
+      "line": 117
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/page.tsx",
+      "line": 123
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/page.tsx",
+      "line": 129
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/page.tsx",
+      "line": 164
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/page.tsx",
+      "line": 207
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/page.tsx",
+      "line": 415
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/research/page.tsx",
+      "line": 61
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/research/page.tsx",
+      "line": 71
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/app/vision-and-mission/page.tsx",
+      "line": 61
+    },
+    {
+      "token": "animate-in",
+      "file": "src/components/forms/EnquiryForm.tsx",
+      "line": 84
+    },
+    {
+      "token": "fade-in",
+      "file": "src/components/forms/EnquiryForm.tsx",
+      "line": 84
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/components/home/AffiliationsStrip.tsx",
+      "line": 13
+    },
+    {
+      "token": "shadow-xs",
+      "file": "src/components/home/AffiliationsStrip.tsx",
+      "line": 40
+    },
+    {
+      "token": "drop-shadow-xs",
+      "file": "src/components/home/AffiliationsStrip.tsx",
+      "line": 40
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/components/home/ProgrammeOverviewPrint.tsx",
+      "line": 56
+    },
+    {
+      "token": "border-l-3",
+      "file": "src/components/home/ProgrammeOverviewPrint.tsx",
+      "line": 61
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/components/home/ProgrammeOverviewPrint.tsx",
+      "line": 90
+    },
+    {
+      "token": "bg-navy-950/98",
+      "file": "src/components/layout/Navbar.tsx",
+      "line": 71
+    },
+    {
+      "token": "animate-in",
+      "file": "src/components/layout/Navbar.tsx",
+      "line": 163
+    },
+    {
+      "token": "fade-in",
+      "file": "src/components/layout/Navbar.tsx",
+      "line": 163
+    },
+    {
+      "token": "animate-in",
+      "file": "src/components/layout/Navbar.tsx",
+      "line": 225
+    },
+    {
+      "token": "fade-in",
+      "file": "src/components/layout/Navbar.tsx",
+      "line": 225
+    },
+    {
+      "token": "animate-in",
+      "file": "src/components/layout/Navbar.tsx",
+      "line": 330
+    },
+    {
+      "token": "fade-in",
+      "file": "src/components/layout/Navbar.tsx",
+      "line": 330
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/components/search/GlobalSearchModal.tsx",
+      "line": 64
+    },
+    {
+      "token": "animate-in",
+      "file": "src/components/search/GlobalSearchModal.tsx",
+      "line": 77
+    },
+    {
+      "token": "fade-in",
+      "file": "src/components/search/GlobalSearchModal.tsx",
+      "line": 77
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/components/search/GlobalSearchModal.tsx",
+      "line": 81
+    },
+    {
+      "token": "shadow-xs",
+      "file": "src/components/search/GlobalSearchModal.tsx",
+      "line": 124
+    },
+    {
+      "token": "text-gold-600",
+      "file": "src/components/ui/Accordion.tsx",
+      "line": 66
+    },
+    {
+      "token": "no-scrollbar",
+      "file": "src/components/ui/Tabs.tsx",
+      "line": 38
+    }
+  ],
+  "todoAndDraftMarkers": [
+    {
+      "file": "src/app/about/page.tsx",
+      "line": 86,
+      "text": "{/* Vision & Mission Sections (DRAFT COPY - confirm with client) */}"
+    },
+    {
+      "file": "src/app/about/page.tsx",
+      "line": 87,
+      "text": "{/* TODO: CONFIRM WITH CLIENT - The brochures do not print a full multi-paragraph Vision & Mission body text, but include 'VISION & MISSION' tabs/badges. This text is draft copy for client confirmation. */}"
+    },
+    {
+      "file": "src/app/about/page.tsx",
+      "line": 101,
+      "text": "{/* TODO: CONFIRM WITH CLIENT */}"
+    },
+    {
+      "file": "src/app/about/page.tsx",
+      "line": 102,
+      "text": "Draft copy — pending client confirmation"
+    },
+    {
+      "file": "src/app/about/page.tsx",
+      "line": 129,
+      "text": "{/* TODO: CONFIRM WITH CLIENT */}"
+    },
+    {
+      "file": "src/app/about/page.tsx",
+      "line": 130,
+      "text": "Draft copy — pending client confirmation"
+    },
+    {
+      "file": "src/app/contact/page.tsx",
+      "line": 143,
+      "text": "{/* TODO: CONFIRM WITH CLIENT */}"
+    },
+    {
+      "file": "src/app/vision-and-mission/page.tsx",
+      "line": 27,
+      "text": "{/* // DRAFT COPY - confirm with client */}"
+    },
+    {
+      "file": "src/app/vision-and-mission/page.tsx",
+      "line": 51,
+      "text": "{/* TODO: CONFIRM WITH CLIENT */}"
+    },
+    {
+      "file": "src/app/vision-and-mission/page.tsx",
+      "line": 52,
+      "text": "Draft copy — pending client confirmation"
+    },
+    {
+      "file": "src/app/vision-and-mission/page.tsx",
+      "line": 57,
+      "text": "{/* // DRAFT COPY - confirm with client */}"
+    },
+    {
+      "file": "src/app/vision-and-mission/page.tsx",
+      "line": 119,
+      "text": "{/* TODO: CONFIRM WITH CLIENT */}"
+    },
+    {
+      "file": "src/app/vision-and-mission/page.tsx",
+      "line": 120,
+      "text": "Draft copy — pending client confirmation"
+    },
+    {
+      "file": "src/data/centres.ts",
+      "line": 26,
+      "text": "// TODO: CONFIRM WITH CLIENT - Brochure 2 prints garbled text: \"Daddy Guppy Bangalore INDIA.\""
+    },
+    {
+      "file": "src/data/centres.ts",
+      "line": 83,
+      "text": "// TODO: CONFIRM WITH CLIENT - Appears in Brochure 2 only; absent in Brochure 1."
+    },
+    {
+      "file": "src/data/centres.ts",
+      "line": 118,
+      "text": "// TODO: CONFIRM WITH CLIENT - Brochure 1 lists Georgia (USA), whereas Brochure 2 lists Florida (US)."
+    },
+    {
+      "file": "src/data/config.ts",
+      "line": 6,
+      "text": "*    below with an editable field and an explicit \"// TODO: CONFIRM WITH CLIENT\" comment."
+    },
+    {
+      "file": "src/data/config.ts",
+      "line": 84,
+      "text": "// TODO: CONFIRM WITH CLIENT - Brochure 1 uses \"Trinity International University\"."
+    },
+    {
+      "file": "src/data/config.ts",
+      "line": 93,
+      "text": "// TODO: CONFIRM WITH CLIENT - Brochure 1 specifies \"The Indian Trusts Act, 1882\"."
+    },
+    {
+      "file": "src/data/config.ts",
+      "line": 99,
+      "text": "// TODO: CONFIRM WITH CLIENT - Tamil Nadu registration number:"
+    },
+    {
+      "file": "src/data/config.ts",
+      "line": 108,
+      "text": "// TODO: CONFIRM WITH CLIENT - Karnataka registration number:"
+    },
+    {
+      "file": "src/data/config.ts",
+      "line": 122,
+      "text": "// TODO: CONFIRM WITH CLIENT - Brochure 2 prints garbled text: \"Daddy Guppy Bangalore INDIA.\""
+    },
+    {
+      "file": "src/data/config.ts",
+      "line": 128,
+      "text": "// TODO: CONFIRM WITH CLIENT - Brochure 1 lists \"Georgia (USA)\"."
+    },
+    {
+      "file": "src/data/config.ts",
+      "line": 153,
+      "text": "generalEmail: \"info@trinityinternationaluniversity.edu.in\", // TODO: CONFIRM WITH CLIENT"
+    },
+    {
+      "file": "src/data/config.ts",
+      "line": 154,
+      "text": "admissionsEmail: \"admissions@trinityinternationaluniversity.edu.in\", // TODO: CONFIRM WITH CLIENT"
+    },
+    {
+      "file": "src/data/config.ts",
+      "line": 155,
+      "text": "phone: \"+91 (0) 80-XXXXXXXX\", // TODO: CONFIRM WITH CLIENT"
+    },
+    {
+      "file": "src/data/governance.ts",
+      "line": 30,
+      "text": "// TODO: CONFIRM WITH CLIENT - Brochure 2 writes \"Ebenezer. D. Manohar\" with credentials \"M.Div., M.Th., D.D., Ph.D.\""
+    }
+  ],
+  "brokenStaticLinks": [],
+  "summary": {
+    "invalidTailwindCount": 73,
+    "undefinedGoldShadesCount": 54,
+    "todoDraftCount": 27
+  }
+}

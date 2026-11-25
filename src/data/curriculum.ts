@@ -11,7 +11,6 @@ export interface CurriculumModule {
   topics: Array<{
     title: string;
     subtopics?: string[];
-    note?: string;
   }>;
   comparisons?: Array<{
     religion: string;
@@ -26,10 +25,10 @@ export const biblicalMinistryModules: CurriculumModule[] = [
     id: 1,
     title: "Introduction to the Bible",
     shortTitle: "Intro to Bible",
-    color: "#1E6B3A", // Forest green
-    badgeBg: "bg-emerald-100 text-emerald-900 border-emerald-300",
-    textColor: "text-emerald-800",
-    borderColor: "border-emerald-500",
+    color: "#1E6B3A",
+    badgeBg: "bg-emerald-100 text-emerald-950 border-emerald-300",
+    textColor: "text-emerald-900",
+    borderColor: "border-emerald-600",
     iconName: "BookOpen",
     description:
       "A systematic introduction establishing the formation, canonization, and historical backdrop of sacred scripture.",
@@ -64,10 +63,10 @@ export const biblicalMinistryModules: CurriculumModule[] = [
     id: 2,
     title: "Major World Religions",
     shortTitle: "World Religions",
-    color: "#C0561B", // Burnt orange
-    badgeBg: "bg-amber-100 text-amber-900 border-amber-300",
-    textColor: "text-amber-800",
-    borderColor: "border-amber-500",
+    color: "#C0561B",
+    badgeBg: "bg-amber-100 text-amber-950 border-amber-300",
+    textColor: "text-amber-900",
+    borderColor: "border-amber-600",
     iconName: "Globe",
     description:
       "An analytical survey of prominent world religions, fostering missional awareness and intercultural dialogue.",
@@ -77,7 +76,6 @@ export const biblicalMinistryModules: CurriculumModule[] = [
       { title: "Christianity", subtopics: ["Trinitarian monotheism, Incarnation, crucifixion, and redemptive gospel"] },
       { title: "Judaism", subtopics: ["Torah covenant, Talmudic traditions, and Jewish liturgical holidays"] },
     ],
-    // Comparison section from Brochure 2:
     comparisons: [
       {
         religion: "Christianity",
@@ -86,7 +84,7 @@ export const biblicalMinistryModules: CurriculumModule[] = [
         sacredTextsOrPath: "Holy Bible (Old and New Testaments)",
       },
       {
-        religion: "Buddhism (BUTCBA / Buddha)",
+        religion: "Buddhism",
         theisticType: "Non-theistic",
         coreBeliefs: "Teaches the Four Noble Truths and Eightfold Path toward Nirvana and liberation from suffering.",
         sacredTextsOrPath: "Tripitaka (Pali Canon) and Mahayana Sutras",
@@ -103,10 +101,10 @@ export const biblicalMinistryModules: CurriculumModule[] = [
     id: 3,
     title: "Christian Ethics",
     shortTitle: "Ethics",
-    color: "#0D5C75", // Teal
-    badgeBg: "bg-cyan-100 text-cyan-900 border-cyan-300",
-    textColor: "text-cyan-800",
-    borderColor: "border-cyan-500",
+    color: "#0D5C75",
+    badgeBg: "bg-cyan-100 text-cyan-950 border-cyan-300",
+    textColor: "text-cyan-900",
+    borderColor: "border-cyan-600",
     iconName: "Scale",
     description:
       "Biblical principles of moral theology and the practical duties of Christian believers in contemporary civil society.",
@@ -122,7 +120,7 @@ export const biblicalMinistryModules: CurriculumModule[] = [
       {
         title: "Moral Teachings of Jesus Christ",
         subtopics: [
-          "The Sermon on the Mount (Matthew 5-7)",
+          "The Sermon on the Mount (Matthew 5–7)",
           "The Great Commandments: Love of God and love of neighbour",
           "Radical grace, forgiveness, and Kingdom ethics",
         ],
@@ -141,10 +139,10 @@ export const biblicalMinistryModules: CurriculumModule[] = [
     id: 4,
     title: "Christian Counselling",
     shortTitle: "Counselling",
-    color: "#5B2C83", // Royal Purple
-    badgeBg: "bg-purple-100 text-purple-900 border-purple-300",
-    textColor: "text-purple-800",
-    borderColor: "border-purple-500",
+    color: "#5B2C83",
+    badgeBg: "bg-purple-100 text-purple-950 border-purple-300",
+    textColor: "text-purple-900",
+    borderColor: "border-purple-600",
     iconName: "HeartHandshake",
     description:
       "Pastoral care methodologies integrating biblical truth with therapeutic understanding to support troubled hearts and minds.",
@@ -169,7 +167,7 @@ export const biblicalMinistryModules: CurriculumModule[] = [
         title: "Situations of Problems",
         subtopics: [
           "Marital and domestic discord",
-          "Addiction, dependency, and compulsive behaviors",
+          "Addiction, dependency, and compulsive behaviours",
           "Terminal illness, aging, and end-of-life pastoral accompaniment",
         ],
       },
@@ -195,10 +193,10 @@ export const biblicalMinistryModules: CurriculumModule[] = [
     id: 5,
     title: "Christian Doctrines",
     shortTitle: "Doctrines",
-    color: "#1E4C9F", // Blue
-    badgeBg: "bg-blue-100 text-blue-900 border-blue-300",
-    textColor: "text-blue-800",
-    borderColor: "border-blue-500",
+    color: "#1E4C9F",
+    badgeBg: "bg-blue-100 text-blue-950 border-blue-300",
+    textColor: "text-blue-900",
+    borderColor: "border-blue-600",
     iconName: "Church",
     description:
       "A systematic formulation of the classical tenets of the historic Christian faith and ecclesiastical ordinances.",
@@ -212,12 +210,11 @@ export const biblicalMinistryModules: CurriculumModule[] = [
       { title: "Introduction to the Church", subtopics: ["Ecclesiology: Body of Christ, marks of the true Church, and global mission"] },
       { title: "Early Church Ordinances", subtopics: ["Water Baptism and the Holy Communion (The Lord's Supper)"] },
       {
-        title: "Doctrine of Christ (Theology) & The Holy Spirit",
+        title: "Doctrine of Christ & The Holy Spirit",
         subtopics: [
-          "Hypostatic union of Christ: Fully God and fully human (Brochure 2 addition)",
-          "Pneumatology: Person, gifts, and fruit of the Holy Spirit (Brochure 2 addition)",
+          "Hypostatic union of Christ: Fully God and fully human",
+          "Pneumatology: Person, gifts, and fruit of the Holy Spirit",
         ],
-        note: "Explicitly highlighted in Brochure 2 doctrine list",
       },
     ],
   },
@@ -225,24 +222,24 @@ export const biblicalMinistryModules: CurriculumModule[] = [
     id: 6,
     title: "Old Testament Theology",
     shortTitle: "O.T. Theology",
-    color: "#7A4A1E", // Brown
-    badgeBg: "bg-stone-200 text-stone-900 border-stone-400",
-    textColor: "text-amber-950",
-    borderColor: "border-amber-700",
+    color: "#7A4A1E",
+    badgeBg: "bg-stone-200 text-stone-950 border-stone-400",
+    textColor: "text-stone-900",
+    borderColor: "border-amber-800",
     iconName: "Scroll",
     description:
       "Theological synthesis of the Hebrew Bible exploring the divine covenant, redemptive history, and the hope of Israel.",
     topics: [
       { title: "History and Method", subtopics: ["Thematic versus historical-chronological approaches to O.T. theology"] },
       { title: "Nature and Names of God", subtopics: ["Divine holiness, sovereignty, righteousness, and loving-kindness (Hesed)"] },
-      { title: "Divine Revelation", subtopics: ["God speaking through theophanies, prophets, historical acts, and torah"] },
-      { title: "Creation", subtopics: ["Cosmology of Genesis 1-2, divine order, and humanity as stewards"] },
+      { title: "Divine Revelation", subtopics: ["God speaking through theophanies, prophets, historical acts, and Torah"] },
+      { title: "Creation", subtopics: ["Cosmology of Genesis 1–2, divine order, and humanity as stewards"] },
       { title: "Providence of God", subtopics: ["God's sovereign governance of nations, history, and individual lives"] },
       { title: "The Problem of Evil (Theodicy)", subtopics: ["Perspectives from the Book of Job, Habakkuk, and the Psalms of Lament"] },
       { title: "Identity, Origin and Nature of Humanity", subtopics: ["Creation in God's image, dignity, moral agency, and human frailty"] },
       { title: "Covenant", subtopics: ["Noahic, Abrahamic, Mosaic, Davidic, and the Prophesied New Covenant"] },
       { title: "Theocracy", subtopics: ["God's direct rule over Israel prior to the monarchy and prophetic critique"] },
-      { title: "Law (and Grace)", subtopics: ["Moral, civil, and ceremonial laws; divine justice reflecting holy character (Brochure 2 adds 'and Grace')"] },
+      { title: "Law and Grace", subtopics: ["Moral, civil, and ceremonial laws; divine justice and gracious faithfulness"] },
       { title: "Sacrifice and Worship", subtopics: ["The Levitical sacrificial system, tabernacle, temple, and true heart devotion"] },
       { title: "Redemption and Mission", subtopics: ["The Exodus archetype of deliverance and Israel's call as a light to nations"] },
       { title: "Ultimate Hope and Future of Humanity", subtopics: ["Messianic expectations, Day of the Lord, resurrection, and the age to come"] },
@@ -252,20 +249,19 @@ export const biblicalMinistryModules: CurriculumModule[] = [
     id: 7,
     title: "New Testament",
     shortTitle: "New Testament",
-    color: "#0B1F4B", // Deep Navy
+    color: "#0B1F4B",
     badgeBg: "bg-indigo-100 text-indigo-950 border-indigo-300",
     textColor: "text-indigo-950",
-    borderColor: "border-indigo-600",
+    borderColor: "border-indigo-700",
     iconName: "BookOpenCheck",
     description:
       "Comprehensive examination of the 27 New Testament books, their historical composition, textual transmission, and apostolic doctrine.",
     topics: [
       {
-        title: "Name, Description and Origin of the New Testament",
+        title: "Name, Designation and Origin of the New Testament",
         subtopics: [
-          "The 'New Covenant' concept in Jeremiah 31 and fulfilled in Christ",
+          "The 'New Covenant' promise in Jeremiah 31 fulfilled in Christ",
           "Occasion, date, authorship, and audience of the Gospels and Epistles",
-          "Brochure 2 variant: 'Name, Designation and Origin of the New Testament'",
         ],
       },
       {
@@ -281,19 +277,19 @@ export const biblicalMinistryModules: CurriculumModule[] = [
         subtopics: [
           "Synoptic Gospels and the Fourth Gospel (John)",
           "Acts of the Apostles and the early missionary expansion",
-          "Pauline corpus, Catholic Epistles, and the Apocalypse of John",
+          "Pauline corpus, General Epistles, and the Apocalypse of John",
         ],
       },
       {
-        title: "History",
+        title: "Historical Context",
         subtopics: [
           "First-century Greco-Roman and Second Temple Jewish context",
-          "The Roman imperium, emperors, governors, and Jewish sects",
-          "Persecution of the early Christians under Nero, Domitian, and Trajan",
+          "The Roman imperium, governors, and Jewish sects",
+          "Early Christian witness and perseverance under Roman scrutiny",
         ],
       },
       {
-        title: "Doctrines",
+        title: "Apostolic Doctrines",
         subtopics: [
           "Christology, Soteriology, and Pneumatology in apostolic preaching",
           "Justification, the New Creation, and Christian fellowship (Koinonia)",
